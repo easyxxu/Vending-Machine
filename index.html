@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/main.css">
+    <link rel="stylesheet" href="./style/common.css">
+    <title>Cola Cola - Vending Machine</title>
+</head>
+
+<body>
+    <header>
+        <h1><a href="#"><img class="logo" src="./img-cola/Cola-logo.svg" alt="Cola"></a></h1>
+    </header>
+    <main class="container">
+        <section class="vending-machine-select">
+            <h2 class="a11y-hidden">음료수 자판기</h2>
+            <div class="drink-list">
+                <article class="drink active">
+                    <img class="drink-img" src="./img-cola/red-cola.svg" alt="빨간 콜라">
+                    <p class="drink-name">Original_Cola</p>
+                    <div class="drink-price">1000원</div>
+                </article>
+                <article class="drink disabled">
+                    <img class="drink-img" src="./img-cola/purple-cola.svg" alt="보라 콜라">
+                    <p class="drink-name">Violet_Cola</p>
+                    <div class="drink-price">1000원</div>
+                </article>
+                <article class="drink">
+                    <img class="drink-img" src="./img-cola/yellow-cola.svg" alt="노란 콜라">
+                    <p class="drink-name">Yellow_Cola</p>
+                    <div class="drink-price">1000원</div>
+                </article>
+                <article class="drink">
+                    <img class="drink-img" src="./img-cola/blue-cola.svg" alt="쿨 콜라">
+                    <p class="drink-name">Cool_Cola</p>
+                    <div class="drink-price">1000원</div>
+                </article>
+                <article class="drink active">
+                    <img class="drink-img" src="./img-cola/green-cola.svg" alt="초록 콜라">
+                    <p class="drink-name">Green_Cola</p>
+                    <div class="drink-price">1000원</div>
+                </article>
+                <article class="drink">
+                    <img class="drink-img" src="./img-cola/orange-cola.svg" alt="주황 콜라">
+                    <p class="drink-name">Orange_Cola</p>
+                    <div class="drink-price">1000원</div>
+                </article>
+            </div>
+            <div class="drink-btn-list">
+                <div class="balance">
+                    <p>잔액 :</p>
+                    <p>1,000 원</p>
+                </div>
+                <button class="btn-balance" type="button">거스름돈 반환</button>
+                <input class="input-deposit" type="text" placeholder="입금액 입력">
+                <button class="btn-deposit" type="button">입금</button>
+                <div class="select-drinks">
+                    <ul class="select-drinks-ul">
+                        <li>
+                            <div class="get-drink small">
+                                <img class="get-drink-img" src="./img-cola/red-cola.svg" alt="빨간 콜라">
+                                <p class="get-drink-name">Original_Cola</p>
+                                <div class="get-drink-count">1</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="get-drink small">
+                                <img class="get-drink-img" src="./img-cola/green-cola.svg" alt="초록 콜라">
+                                <p class="get-drink-name">Green_Cola</p>
+                                <div class="get-drink-count">2</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <button class="get-btn">획득</button>
+            </div>
+        </section>
+        <section class="vending-machine-total">
+            <div class="my-money-container">
+                <div class="my-money">
+                    <p>소지금 :</p>
+                    <p>25,000 원</p>
+                </div>
+            </div>
+            <div class="get-drink-container">
+                <h2 class="get-drink-title">획득한 음료</h2>
+                <div class="get-drink-list">
+                    <ul class="get-drink-ul">
+                        <li>
+                            <div class="get-drink">
+                                <img class="get-drink-img" src="./img-cola/red-cola.svg" alt="빨간 콜라">
+                                <p class="get-drink-name">Original_Cola</p>
+                                <div class="get-drink-count">1</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="get-drink">
+                                <img class="get-drink-img" src="./img-cola/green-cola.svg" alt="초록 콜라">
+                                <p class="get-drink-name">Green_Cola</p>
+                                <div class="get-drink-count">2</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="get-drink">
+                                <img class="get-drink-img" src="./img-cola/orange-cola.svg" alt="오렌지 콜라">
+                                <p class="get-drink-name">Orange_Cola</p>
+                                <div class="get-drink-count">1</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="get-drink">
+                                <img class="get-drink-img" src="./img-cola/purple-cola.svg" alt="보라 콜라">
+                                <p class="get-drink-name">Violet_Cola</p>
+                                <div class="get-drink-count">5</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <p class="get-drink-total">총금액 : 9,000 원</p>
+            </div>
+        </section>
+    </main>
+    <script>
+        const drinkList = document.querySelectorAll(".drink-list"); //음료 리스트
+        const balance = document.querySelector(".balance"); //잔액
+        const selectDrinks = document.querySelector(".select-drinks-ul li"); // 선택된 음료 리스트
+        const btnGet = document.querySelector(".get-btn"); // 획득 버튼
+        const getDrinks = document.querySelectorAll(".get-drink-ul li") //최종 선택된 음료 리스트
+
+    </script>
+</body>
+
+</html>

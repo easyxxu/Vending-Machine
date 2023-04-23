@@ -1,0 +1,216 @@
+/* reset */
+:root {
+  --main-color: #eae8fe;
+}
+body,
+h1 {
+  margin: 0;
+}
+body {
+  background: var(--main-color);
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+/* Layout */
+/* header */
+header {
+  width: auto;
+  max-width: 748px;
+  margin: 0 auto 68px auto;
+  text-align: center;
+}
+header .logo {
+  width: 386px;
+}
+
+/* main */
+.container {
+  display: flex;
+  width: 748px;
+  margin: 0 auto;
+  gap: 28px;
+}
+.vending-machine-select {
+  background: #fff;
+  width: 360px;
+  padding: 31px 27px 28px 27px;
+  box-sizing: border-box;
+}
+.drink-list {
+  display: grid;
+  grid-template-columns: repeat(3, 94px);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.drink-btn-list {
+  display: grid;
+  gap: 11px 12px;
+  grid-template-columns: 200px 94px;
+  grid-template-rows: 33px 33px 106px;
+}
+.vending-machine-total {
+  width: 50%;
+}
+.vending-machine-total .get-drink-container {
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.vending-machine-total .get-drink-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+/* style */
+.drink-btn-list .balance {
+  background: var(--main-color);
+  border-radius: 5px;
+  padding: 6px 10px 7px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.drink-btn-list .input-deposit {
+  border: 1px solid #bdbdbd;
+  border-radius: 5px;
+  padding-left: 6px;
+}
+.drink-btn-list .select-drinks {
+  background: var(--main-color);
+  padding-top: 12px;
+  padding-left: 12px;
+  border: 1px solid #bdbdbd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  overflow-y: scroll;
+  width: 200px;
+}
+.drink-btn-list .select-drinks-ul {
+  list-style-type: none;
+}
+.drink-btn-list .select-drinks::-webkit-scrollbar {
+  width: 16px; /* 스크롤바 너비 */
+}
+/* 스크롤바 막대 */
+.drink-btn-list .select-drinks::-webkit-scrollbar-thumb {
+  background-color: #fff;
+  border-radius: 20px;
+  border: 6px solid var(--main-color);
+}
+/* 스크롤바 막대 영역 */
+.drink-btn-list .select-drinks::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0);
+}
+.drink-btn-list .get-drink.small {
+  background: #fff;
+  width: 170px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+}
+.drink-btn-list .get-btn {
+  background: #6327fe;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  color: #fff;
+}
+
+.vending-machine-total .my-money-container {
+  background: #fff;
+  width: 360px;
+  height: 50px;
+  text-align: center;
+  padding: 9px 27px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+.vending-machine-total .my-money {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 6px 10px;
+  width: 306px;
+  height: 32px;
+  text-align: center;
+  background: var(--main-color);
+}
+
+.vending-machine-total .get-drink-container {
+  background: #fff;
+}
+
+.vending-machine-total .get-drink-title {
+  font-size: 14px;
+  color: #000;
+  margin-top: 25px;
+  margin-bottom: 13px;
+}
+.vending-machine-total .get-drink-list {
+  background: var(--main-color);
+  border: 1px solid #bdbdbd;
+  box-sizing: border-box;
+  border-radius: 5px;
+  width: 306px;
+  height: 364px;
+  padding: 12px 0 12px 12px;
+  overflow-y: scroll;
+}
+.vending-machine-total .get-drink-ul {
+  list-style-type: none;
+}
+.vending-machine-total .get-drink-ul li {
+  margin-bottom: 6px;
+}
+.vending-machine-total .get-drink-list::-webkit-scrollbar {
+  width: 16px;
+}
+.vending-machine-total .get-drink-list::-webkit-scrollbar-thumb {
+  background-color: #fff;
+  border-radius: 20px;
+  border: 6px solid var(--main-color);
+}
+.vending-machine-total .get-drink-list::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0);
+}
+.vending-machine-total .get-drink-total {
+  align-self: flex-end;
+  margin-top: 6px;
+  margin-right: 29px;
+  margin-bottom: 28px;
+  font-size: 12px;
+}
+@media (max-width: 747px) {
+  body {
+    background: #fff;
+  }
+  header {
+    margin-bottom: 28px;
+  }
+  header .logo {
+    width: 166px;
+  }
+  .container {
+    max-width: 360px;
+    flex-direction: column;
+    gap: 0;
+  }
+  .vending-machine-select {
+    padding: 0 27px 20px 27px;
+  }
+  .vending-machine-total .my-money-container {
+    margin-bottom: 41px;
+    padding: 0 27px;
+    height: auto;
+  }
+  .vending-machine-total .get-drink-title {
+    margin-top: 0;
+  }
+}
